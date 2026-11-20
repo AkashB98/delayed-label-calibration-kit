@@ -1,0 +1,57 @@
+{
+  "kit": "delayed-label-calibration-kit",
+  "passed": 10,
+  "results": [
+    {
+      "detail": "naive=0.125 bias=-0.055 truth=0.18",
+      "name": "G1 naive understates slow segment by the planted amount (rate 0.125, bias -0.055)",
+      "passed": true
+    },
+    {
+      "detail": "rate=0.176126 ci=[0.158605, 0.193646] truth=0.18",
+      "name": "G2 completion estimate for slow lands within its CI of planted truth",
+      "passed": true
+    },
+    {
+      "detail": "fast completion=0.075926 naive=0.074",
+      "name": "G3 completion estimate for fast covers planted truth; naive bias is small",
+      "passed": true
+    },
+    {
+      "detail": "widths at completion 1.0/0.5/0.25 = [0.047624, 0.070951, 0.102791]",
+      "name": "G4 completion CI width increases as maturity (completion) decreases",
+      "passed": true
+    },
+    {
+      "detail": "summary={'claimable': 6, 'provisional': 4, 'not claimable': 2}",
+      "name": "G5 maturity report labels pinned (6 claimable / 4 provisional / 2 not claimable)",
+      "passed": true
+    },
+    {
+      "detail": "per-cohort labels recomputed from planted arrival distributions agree",
+      "name": "G6 maturity labels match planted label-arrival fractions",
+      "passed": true
+    },
+    {
+      "detail": "slow curve at MOB4=0.4689 (planted 0.5)",
+      "name": "G7 completion curves pinned and built only from matured cohorts",
+      "passed": true
+    },
+    {
+      "detail": "filtered=0.1672 excluded=7",
+      "name": "G8 maturity-filtered arm is unbiased-er but stale (excludes 7 slow cohorts)",
+      "passed": true
+    },
+    {
+      "detail": "codes=(1, 0, 2)",
+      "name": "G9 CLI check exit codes 1/0/2 (bias detected / instant control clean / IO error)",
+      "passed": true
+    },
+    {
+      "detail": "instant slow naive=0.178167",
+      "name": "G10 instant control has no naive bias + full report is deterministic",
+      "passed": true
+    }
+  ],
+  "total": 10
+}
